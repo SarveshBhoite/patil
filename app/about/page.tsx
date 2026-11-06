@@ -5,7 +5,7 @@ import { Shield, Sparkles, TrendingUp, Target, Users, Zap, CheckCircle2, Award, 
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | LeadSpire Digitals",
+  title: "About Us | ELEVATE05",
   description: "Learn about our philosophy, engineering values, and how we architect digital growth engines.",
 };
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
     <main className="flex-1 w-full flex flex-col bg-[#07080C]">
       {/* ── Page Hero with Prism background ── */}
       <PageHero
-        eyebrow="ABOUT LEADSPIRE"
+        eyebrow="ABOUT ELEVATE05"
         title={
           <>
             ARCHITECTING{" "}
@@ -93,7 +93,7 @@ export default function AboutPage() {
                 </span>
               </h2>
               <p className="text-base md:text-lg text-[#9DA6BA] leading-relaxed">
-                Most agencies burn venture funding or operating profit on bloated retainers, vague reports, and vanity metrics that never hit the bank. We started LeadSpire to eradicate agency ambiguity.
+                Most agencies burn venture funding or operating profit on bloated retainers, vague reports, and vanity metrics that never hit the bank. We started ELEVATE05 to eradicate agency ambiguity.
               </p>
               <p className="text-sm md:text-base text-[#6B758E] leading-relaxed">
                 Every line of code we ship, every creative asset we render, and every campaign dollar we deploy is tied to a singular mandate: producing measurable, compounding commercial velocity for our partners.
@@ -138,7 +138,7 @@ export default function AboutPage() {
               <span className="text-[11px] font-mono font-bold tracking-widest text-[#FDE68A] uppercase">How We Operate</span>
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-extrabold text-[#F3F5F9] uppercase tracking-tight mb-4">
-              The LeadSpire Growth Protocol
+              The ELEVATE05 Growth Protocol
             </h2>
             <p className="text-[#9DA6BA] text-sm md:text-base">
               A systematic 4-phase deployment built to de-risk investments and scale customer acquisition predictably.

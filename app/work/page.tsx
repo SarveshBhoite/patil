@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowUpRight, TrendingUp, DollarSign, Award, Target } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Case Studies & Digital Growth Work | LeadSpire Digitals",
+  title: "Case Studies & Digital Growth Work | ELEVATE05",
   description: "Explore how we turn digital attention into measurable business growth through digital strategy, performance marketing, and high-conversion web development.",
 };
 

@@ -1,8 +1,8 @@
 export const BRAND_CONFIG = {
-  name: "LeadSpire Digitals",
+  name: "ELEVATE05",
   tagline: "YOUR GROWTH, OUR MISSION",
-  email: "hello@leadspiredigitals.com",
-  phone: "+91 XXXXX XXXXX",
+  email: "elevate0005@gmail.com",
+  phone: "+91 7030265985",
   location: "India"
 };
 
@@ -17,6 +17,7 @@ export const NAV_LINKS = [
 ];
 
 export const SOCIAL_LINKS = [
+  { name: "WhatsApp", href: "https://wa.me/917030265985" },
   { name: "Instagram", href: "#" },
   { name: "LinkedIn", href: "#" },
   { name: "Facebook", href: "#" },

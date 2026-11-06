@@ -80,15 +80,18 @@ export default function ContactSection() {
               </a>
 
               {/* Phone */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#11141E] border border-white/10">
+              <a
+                href={`tel:${BRAND_CONFIG.phone.replace(/\s+/g, '')}`}
+                className="group flex items-center gap-4 transition-all"
+              >
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#11141E] border border-white/10 group-hover:border-[#F59E0B]/40 group-hover:shadow-[0_4px_16px_rgba(245,158,11,0.2)] transition-all duration-200">
                   <Phone className="w-5 h-5 text-[#FF8A3D]" />
                 </div>
                 <div>
                   <div className="text-xs font-mono text-[#626C82] mb-0.5 uppercase tracking-wide">Direct Line</div>
-                  <div className="text-[#F3F5F9] font-medium text-sm">{BRAND_CONFIG.phone}</div>
+                  <div className="text-[#F3F5F9] font-medium group-hover:text-[#FDE68A] transition-colors text-sm">{BRAND_CONFIG.phone}</div>
                 </div>
-              </div>
+              </a>
 
               {/* Location */}
               <div className="flex items-center gap-4">
@@ -107,14 +110,16 @@ export default function ContactSection() {
               <p className="text-xs font-mono font-bold tracking-widest text-[#626C82] uppercase mb-4">Official Channels</p>
               <div className="flex gap-3">
                 {[
-                  { name: "Instagram", href: "#", icon: InstagramIcon },
-                  { name: "Facebook", href: "#", icon: FacebookIcon },
+                  { name: "Instagram", href: "https://www.instagram.com/elevate05_/?utm_source=ig_web_button_share_sheet", icon: InstagramIcon },
+                  { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61596303621992", icon: FacebookIcon },
                   { name: "LinkedIn", href: "#", icon: LinkedinIcon },
-                  { name: "WhatsApp", href: "#", icon: WhatsappIcon },
+                  { name: "WhatsApp", href: "https://wa.me/917030265985", icon: WhatsappIcon },
                 ].map(({ name, href, icon: Icon }) => (
                   <a
                     key={name}
                     href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={name}
                     className="w-10 h-10 rounded-xl bg-[#11141E] border border-white/10 flex items-center justify-center text-[#9DA6BA] hover:text-[#FDE68A] hover:border-[#F59E0B]/35 hover:shadow-[0_4px_12px_rgba(245,158,11,0.2)] transition-all duration-200"
                   >

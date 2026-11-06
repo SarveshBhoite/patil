@@ -6,8 +6,8 @@ import Link from "next/link";
 import { ShieldCheck, Zap, Award, Target, Rocket } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Why LeadSpire Digitals? | Strategic Asymmetry",
-  description: "Discover the architectural, technical, and strategic advantages that make LeadSpire Digitals the preferred growth partner for visionary founders.",
+  title: "Why ELEVATE05? | Strategic Asymmetry",
+  description: "Discover the architectural, technical, and strategic advantages that make ELEVATE05 the preferred growth partner for visionary founders.",
 };
 
 const DIFFERENTIATORS = [
@@ -41,7 +41,7 @@ export default function WhyUsPage() {
               className="text-transparent bg-clip-text"
               style={{ backgroundImage: "linear-gradient(135deg, #FFF1C5 0%, #F59E0B 50%, #FF5A36 100%)" }}
             >
-              CHOOSE LEADSPIRE.
+              CHOOSE ELEVATE05.
             </span>
           </>
         }

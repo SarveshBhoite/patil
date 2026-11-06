@@ -49,14 +49,14 @@ export default function Navbar() {
       >
         <div className="max-w-[1400px] h-full mx-auto px-6 md:px-8 lg:px-12 flex items-center justify-between gap-4 lg:gap-8 xl:gap-12">
 
-          {/* ── Logo: Crisp luxury typographic brand ── */}
+          {/* ── Logo: Brand logo image with ELEVATE05 ── */}
           <Link
             href="/"
             className="flex-shrink-0 flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B] rounded-lg group"
-            aria-label="LeadSpire Digitals — Home"
+            aria-label="ELEVATE05 — Home"
           >
             <span className="font-display text-xl md:text-2xl font-black tracking-[0.22em] text-[#F3F5F9] uppercase transition-colors group-hover:text-[#FDE68A]">
-              LEADSPIRE
+              ELEVATE05
             </span>
           </Link>
 
@@ -169,14 +169,17 @@ export default function Navbar() {
 
         {/* Mobile header row */}
         <div className="relative z-10 flex items-center justify-between px-6 py-4 border-b border-white/10">
-          <Link href="/" onClick={handleMobileLinkClick} aria-label="LeadSpire Digitals — Home">
+          <Link href="/" onClick={handleMobileLinkClick} aria-label="ELEVATE05 — Home" className="flex items-center gap-2.5">
             <Image
               src="/logo.png"
-              alt="LeadSpire Digitals"
-              width={320}
-              height={120}
-              className="w-[150px] h-auto object-contain"
+              alt="ELEVATE05 Logo"
+              width={140}
+              height={40}
+              className="h-8 w-auto object-contain"
             />
+            <span className="font-display text-lg font-black tracking-[0.2em] text-[#F3F5F9] uppercase">
+              ELEVATE05
+            </span>
           </Link>
           <button
             className="p-2 -mr-1 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B] rounded-lg hover:bg-white/10 transition-colors"

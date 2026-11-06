@@ -228,13 +228,32 @@ const GhostFibers: FC<GhostFibersProps> = ({
     const container = containerRef.current;
     if (!container) return;
 
-    const renderer = new Renderer({
-      webgl: 2,
-      alpha: false,
-      antialias: false,
-      dpr: Math.min(Math.max(dpr, 0.5), 2)
-    });
-    const gl = renderer.gl;
+    // Check if browser/hardware currently allows WebGL context creation
+    const testCanvas = document.createElement('canvas');
+    const hasWebGL = !!(
+      window.WebGLRenderingContext &&
+      (testCanvas.getContext('webgl2') ||
+        testCanvas.getContext('webgl') ||
+        testCanvas.getContext('experimental-webgl'))
+    );
+    if (!hasWebGL) return;
+
+    let renderer: Renderer | null = null;
+    let gl: any = null;
+
+    try {
+      renderer = new Renderer({
+        alpha: false,
+        antialias: false,
+        dpr: Math.min(Math.max(dpr, 0.5), 2)
+      });
+      gl = renderer.gl;
+    } catch {
+      return;
+    }
+
+    if (!gl || !renderer) return;
+
     const canvas = gl.canvas as HTMLCanvasElement;
     canvas.style.width = '100%';
     canvas.style.height = '100%';

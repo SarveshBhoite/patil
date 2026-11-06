@@ -4,8 +4,8 @@ import ContactSection from "@/components/contact/ContactSection";
 import { Clock, ShieldCheck, Mail, Phone, MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Initiate Partnership | LeadSpire Digitals",
-  description: "Ready to scale your business? Connect directly with LeadSpire Digitals growth architects for a strategic evaluation.",
+  title: "Initiate Partnership | ELEVATE05",
+  description: "Ready to scale your business? Connect directly with ELEVATE05 growth architects for a strategic evaluation.",
 };
 
 export default function ContactPage() {

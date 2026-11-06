@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ShieldCheck, Zap, RefreshCw, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Pricing & Investment Architecture | LeadSpire Digitals",
+  title: "Pricing & Investment Architecture | ELEVATE05",
   description: "Transparent, predictable growth plans for startups, scaleups, and market leaders with zero hidden retainers.",
 };
 

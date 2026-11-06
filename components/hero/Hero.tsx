@@ -109,10 +109,10 @@ export default function Hero() {
             Digital Experiences
           </h1>
 
-          {/* Animated StrokeText: LEADSPIRE looping letter-by-letter with fill */}
+          {/* Animated StrokeText: ELEVATE05 looping letter-by-letter with fill */}
           <div ref={brandOutlineRef} className="my-2 select-none w-full overflow-visible">
             <StrokeText
-              text="LEADSPIRE"
+              text="ELEVATE05"
               strokeColor="#F59E0B"
               fillColor="#FDE68A"
               strokeWidth={1.8}

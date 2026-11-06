@@ -101,7 +101,7 @@ export default function AboutSection() {
           >
             <span className="w-2 h-2 rounded-full bg-[#F59E0B]" />
             <span className="text-[11px] font-mono font-bold tracking-[0.22em] text-[#FDE68A] uppercase">
-              About LeadSpire Digitals
+              About ELEVATE05
             </span>
           </div>
 
@@ -116,7 +116,7 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-sm md:text-base text-[#8E97A8] max-w-2xl leading-relaxed font-normal text-center">
-            LeadSpire Digitals bridges high-fashion artistic craftsmanship with rigorous algorithmic execution. Every touchpoint is built to make your business unmistakable and commercially dominant.
+            ELEVATE05 bridges high-fashion artistic craftsmanship with rigorous algorithmic execution. Every touchpoint is built to make your business unmistakable and commercially dominant.
           </p>
         </div>
 

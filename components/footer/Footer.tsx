@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { BRAND_CONFIG, SERVICES } from "@/lib/constants";
-import { Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { InstagramIcon, FacebookIcon, LinkedinIcon, WhatsappIcon } from "@/components/ui/SocialIcons";
 
 const COMPANY_LINKS = [
@@ -31,13 +32,22 @@ export default function Footer() {
 
         {/* ── Top Row: High-Impact Monogram & Quick Consultation CTA ── */}
         <div className="pb-12 mb-12 border-b border-white/[0.08] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <span className="font-display text-2xl lg:text-3xl font-black tracking-[0.22em] text-[#F3F5F9] uppercase">
-              LEADSPIRE
-            </span>
-            <p className="text-xs font-mono text-[#8E97A8] tracking-widest mt-1 uppercase">
-              HIGH-IMPACT DIGITAL ARCHITECTURE & COMMERCIAL GROWTH
-            </p>
+          <div className="flex items-center gap-4">
+            <Image
+              src="/logo.png"
+              alt="ELEVATE05 Logo"
+              width={180}
+              height={50}
+              className="h-10 w-auto object-contain"
+            />
+            <div>
+              <span className="font-display text-2xl lg:text-3xl font-black tracking-[0.22em] text-[#F3F5F9] uppercase">
+                ELEVATE05
+              </span>
+              <p className="text-xs font-mono text-[#8E97A8] tracking-widest mt-1 uppercase">
+                HIGH-IMPACT DIGITAL ARCHITECTURE & COMMERCIAL GROWTH
+              </p>
+            </div>
           </div>
 
           <div className="flex items-center gap-4">
@@ -65,14 +75,16 @@ export default function Footer() {
             {/* Social Channels */}
             <div className="flex items-center gap-2.5 mt-2">
               {[
-                { name: "Instagram", href: "#", icon: InstagramIcon },
-                { name: "Facebook", href: "#", icon: FacebookIcon },
+                { name: "Instagram", href: "https://www.instagram.com/elevate05_/?utm_source=ig_web_button_share_sheet", icon: InstagramIcon },
+                { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61596303621992", icon: FacebookIcon },
                 { name: "LinkedIn", href: "#", icon: LinkedinIcon },
-                { name: "WhatsApp", href: "#", icon: WhatsappIcon },
+                { name: "WhatsApp", href: "https://wa.me/917030265985", icon: WhatsappIcon },
               ].map(({ name, href, icon: Icon }) => (
                 <a
                   key={name}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={name}
                   className="w-9 h-9 rounded-xl bg-[#0E1119] border border-white/[0.08] flex items-center justify-center text-[#8E97A8] hover:text-[#FDE68A] hover:border-[#F59E0B]/40 hover:shadow-[0_0_15px_rgba(245,158,11,0.15)] transition-all duration-200"
                 >
@@ -134,6 +146,16 @@ export default function Footer() {
                   <Mail className="w-3.5 h-3.5" />
                 </div>
                 <span>{BRAND_CONFIG.email}</span>
+              </a>
+
+              <a
+                href={`tel:${BRAND_CONFIG.phone.replace(/\s+/g, '')}`}
+                className="group flex items-center gap-3 text-xs font-mono text-[#8E97A8] hover:text-white transition-colors"
+              >
+                <div className="w-7 h-7 rounded-lg bg-[#0E1119] border border-white/[0.08] flex items-center justify-center text-[#FF8A3D] group-hover:border-[#FF8A3D]/40 transition-all">
+                  <Phone className="w-3.5 h-3.5" />
+                </div>
+                <span>{BRAND_CONFIG.phone}</span>
               </a>
 
               <div className="flex items-center gap-3 text-xs font-mono text-[#8E97A8]">

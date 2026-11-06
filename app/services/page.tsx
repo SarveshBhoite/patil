@@ -7,7 +7,7 @@ import CTASection from "@/components/cta/CTASection";
 import { SERVICES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing & Growth Systems | LeadSpire Digitals",
+  title: "Digital Marketing & Growth Systems | ELEVATE05",
   description: "Explore our integrated systems: performance advertising, conversion web architectures, search dominance, and lifecycle funnels.",
 };
 

@@ -72,7 +72,7 @@ export default function WhySection() {
               className="text-transparent bg-clip-text"
               style={{ backgroundImage: "linear-gradient(135deg, #FFF1C5 0%, #F59E0B 50%, #FF8A3D 100%)" }}
             >
-              Choose LeadSpire
+              Choose ELEVATE05
             </span>
           </h2>
           <p className="text-sm md:text-base text-[#8E97A8] max-w-xl leading-relaxed font-normal">

@@ -65,13 +65,33 @@ const Prism: React.FC<PrismProps> = ({
     const HOVSTR = Math.max(0, hoverStrength || 1);
     const INERT = Math.max(0, Math.min(1, inertia || 0.12));
 
+    // Check if browser/hardware currently allows WebGL context creation
+    const testCanvas = document.createElement('canvas');
+    const hasWebGL = !!(
+      window.WebGLRenderingContext &&
+      (testCanvas.getContext('webgl2') ||
+        testCanvas.getContext('webgl') ||
+        testCanvas.getContext('experimental-webgl'))
+    );
+    if (!hasWebGL) return;
+
     const dpr = Math.min(2, window.devicePixelRatio || 1);
-    const renderer = new Renderer({
-      dpr,
-      alpha: transparent,
-      antialias: false
-    });
-    const gl = renderer.gl;
+    let renderer: Renderer | null = null;
+    let gl: any = null;
+
+    try {
+      renderer = new Renderer({
+        dpr,
+        alpha: transparent,
+        antialias: false
+      });
+      gl = renderer.gl;
+    } catch {
+      return;
+    }
+
+    if (!gl || !renderer) return;
+
     gl.disable(gl.DEPTH_TEST);
     gl.disable(gl.CULL_FACE);
     gl.disable(gl.BLEND);
