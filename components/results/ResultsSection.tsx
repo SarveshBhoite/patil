@@ -117,15 +117,18 @@ export default function ResultsSection() {
           </p>
         </div>
 
-        {/* ── Compact Horizontal Flow Strip with Generous Column Spacing ── */}
-        <div className="relative border-y border-white/[0.08] divide-y md:divide-y-0 md:divide-x divide-white/[0.08] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 backdrop-blur-sm">
+        {/* ── Responsive Flow Grid: 2 Columns on Mobile, 3 on Tablet, 5 on Desktop ── */}
+        <div className="relative border border-white/[0.08] lg:border-x-0 lg:border-y rounded-2xl lg:rounded-none overflow-hidden grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 backdrop-blur-sm divide-x divide-y divide-white/[0.08] lg:divide-y-0">
           {DEMO_METRICS.map((metric, index) => {
             const hasDecimals = Number(metric.value) % 1 !== 0;
+            const isLastOdd = index === DEMO_METRICS.length - 1;
 
             return (
               <div
                 key={index}
-                className="metric-flow-item group relative py-8 md:py-10 px-4 lg:px-6 flex flex-col justify-between items-center text-center transition-all duration-400 hover:bg-white/[0.02]"
+                className={`metric-flow-item group relative py-6 sm:py-8 md:py-10 px-3 sm:px-4 lg:px-6 flex flex-col justify-between items-center text-center transition-all duration-400 hover:bg-white/[0.02] ${
+                  isLastOdd ? "col-span-2 md:col-span-1" : ""
+                }`}
               >
                 {/* Subtle Amber Glow Beam on Hover */}
                 <div
@@ -145,7 +148,7 @@ export default function ResultsSection() {
                 {/* Counter Up Stat - inline flex preventing text wrap or congestion */}
                 <div className="relative my-1 flex items-baseline justify-center whitespace-nowrap">
                   <div
-                    className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-black tracking-normal text-transparent bg-clip-text drop-shadow-[0_4px_16px_rgba(245,158,11,0.2)] transition-transform duration-400 group-hover:scale-105 inline-flex items-baseline"
+                    className="font-display text-2xl sm:text-4xl lg:text-[2.75rem] font-black tracking-normal text-transparent bg-clip-text drop-shadow-[0_4px_16px_rgba(245,158,11,0.2)] transition-transform duration-400 group-hover:scale-105 inline-flex items-baseline"
                     style={{ backgroundImage: "linear-gradient(135deg, #FFFFFF 0%, #FFF1C5 35%, #F59E0B 100%)" }}
                   >
                     <span>{metric.prefix}</span>
@@ -160,11 +163,11 @@ export default function ResultsSection() {
                 </div>
 
                 {/* Metric Label */}
-                <div className="mt-3 flex flex-col items-center gap-1">
-                  <span className="font-mono text-[11px] font-bold tracking-[0.18em] text-white uppercase group-hover:text-[#FDE68A] transition-colors">
+                <div className="mt-2 sm:mt-3 flex flex-col items-center gap-0.5 sm:gap-1">
+                  <span className="font-mono text-[10px] sm:text-[11px] font-bold tracking-[0.15em] sm:tracking-[0.18em] text-white uppercase group-hover:text-[#FDE68A] transition-colors">
                     {metric.label}
                   </span>
-                  <span className="text-[10px] text-[#8E97A8] font-sans">
+                  <span className="text-[9px] sm:text-[10px] text-[#8E97A8] font-sans">
                     Average Verified Lift
                   </span>
                 </div>
